@@ -1,0 +1,322 @@
+
+/* estilos.css */
+
+body {
+  background: linear-gradient(to right, #292827, #444343);
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;  /* Tamaño base */
+  transition: all 0.3s ease;  /* Transición suave */
+  margin: 0;
+  padding: 0;
+}
+/* Aumentar texto para toda la parte de contenido */
+#font-toggle-large:checked ~ .contenido-principal,
+#font-toggle-large:checked ~ .contenido {
+  font-size: 1.5rem; /* Aumentar tamaño de fuente */
+  line-height: 1.8; /* Ajustar el interlineado */
+}
+
+/* Ajustar texto específicamente en la sección "Sobre mí" */
+#font-toggle-large:checked ~ .contenido-principal .sobremi h2 {
+  font-size: 3.5rem; /* Aumentar tamaño del título */
+}
+
+#font-toggle-large:checked ~ .contenido-principal .sobremi p {
+  font-size: 1.5rem; /* Aumentar tamaño del párrafo */
+  line-height: 1.8; /* Ajustar interlineado */
+}
+
+/* Ajustar texto en la sección "Idiomas" */
+#font-toggle-large:checked ~ .contenido-principal .idiomas h2 {
+  font-size: 3.5rem; /* Aumentar tamaño del título */
+}
+
+#font-toggle-large:checked ~ .contenido-principal .idiomas ul li {
+  font-size: 1.5rem; /* Aumentar tamaño de los elementos de la lista */
+  line-height: 1.8; /* Ajustar interlineado */
+}
+
+/* Ajustar texto en la sección "Mis proyectos" */
+#font-toggle-large:checked ~ .contenido-principal .proyectos h2 {
+  font-size: 3.5rem; /* Aumentar tamaño del título */
+}
+
+#font-toggle-large:checked ~ .contenido-principal .proyectos .proyecto-card h3 {
+  font-size: 2rem; /* Aumentar tamaño de los títulos de los proyectos */
+}
+
+#font-toggle-large:checked ~ .contenido-principal .proyectos .proyecto-card p {
+  font-size: 1.5rem; /* Aumentar tamaño de los párrafos de los proyectos */
+  line-height: 1.8; /* Ajustar interlineado */
+}
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+
+}
+
+.hero {
+  background-image: url('../img/iceberg2.jpg');
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  background: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+
+  z-index: 10;
+}
+
+.navbar .boton {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.navbar .boton:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #000;
+  border-color: #fff;
+  transform: scale(1.05);
+}
+/* Capa oscura y texto centrado */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* oscurece un poco la imagen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay h1 {
+  color: #fff;
+  font-size: 4rem;
+  text-shadow: 2px 2px 4px #000;
+  transform: translateY(-210px); /* <- Esto lo sube 50px */
+}
+.font-size-label {
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+.font-size-label:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Sección de abajo */
+.contenido {
+  padding: 40px;
+  background-color: #f5f5f5;
+  font-size: 1.2rem;
+  color: #333;
+}
+.sobremi {
+  font-size: 2.5rem;
+  padding: 50px 20px;
+  background-color: #f7f7f7; /* Fondo claro */
+  color: #333;
+  text-align: center;
+  min-height: 100vh; /* que ocupe todo el alto de la pantalla */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Por si tienes un título arriba */
+  background: linear-gradient(to bottom, #f5f5f5, #fafafa); /* <- Difuminado */
+  
+}
+.contenidosobremi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Hace que se acomode si la pantalla es pequeña */
+}
+.imagen {
+  width: 150px; /* Tamaño de la imagen */
+  height: 150px;
+  border-radius: 50%; /* Hace la imagen circular */
+  overflow: hidden; /* Asegura que la imagen se recorte bien */
+  border: 5px solid #090909; /* Borde blanco alrededor de la imagen */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+.imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen se recorte adecuadamente */
+}
+
+.texto {
+  max-width: 600px;
+  text-align: left;
+}
+
+.texto h2 {
+  font-size: 2,5rem;
+  color: #292827;
+  margin-bottom: 40px;
+}
+
+.texto p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+.habilidades {
+  padding: 60px 40px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.habilidades h2,
+.sobremi h2,
+.proyectos h2,
+.idiomas h2 {
+  font-size: 3rem; /* Tamaño de letra unificado */
+  font-family: 'Segoe UI', sans-serif; /* Fuente unificada */
+  color: #333; /* Color unificado */
+  margin-bottom: 40px; /* Margen inferior */
+  text-align: center; /* Alineación centrada */
+}
+
+.cajas-habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.cuadro-habilidad {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px 30px;
+  width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.cuadro-habilidad h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #444;
+}
+
+.cuadro-habilidad ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cuadro-habilidad ul li {
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+
+.cuadro-habilidad:hover {
+  transform: translateY(-5px);
+}
+.proyectos {
+  padding: 60px 40px;
+  background-color: #f5f5f5;
+  color: #333;
+  background: linear-gradient(to bottom, #f5f5f5, #fafafa); /* <- Difuminado */
+}
+.proyectos h2 {
+  font-size: 3rem; /* Tamaño de letra unificado */
+  font-family: 'Segoe UI', sans-serif; /* Fuente unificada */
+  color: #333; /* Color unificado */
+  text-align: center; /* Alineación centrada */
+}
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.proyecto-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.proyecto-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.proyecto-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+footer {
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.idiomas {
+  font-size: 3rem;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  padding: 60px 40px;
+  background: linear-gradient(to bottom, #f5f5f5, #fafafa); /* <- Difuminado */
+}
+
+.idiomas ul li {
+  font-size: 1.2rem; /* Tamaño más pequeño por defecto */
+  line-height: 1.5; /* Ajustar interlineado */
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+section {
+  background: linear-gradient(to bottom, #f5f5f5, #fafafa); /* Fondo degradado unificado */
+}

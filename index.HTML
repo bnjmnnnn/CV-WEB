@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CV Benjamín Fernández</title>
+        <link rel="stylesheet" href="estilos.css"> <!-- Fixed typo in stylesheet link -->
+        <link rel="icon" href="img/logocolor.png" type="image/png">
+    </head>
+    
+    <body>
+        <input type="checkbox" id="font-toggle-large" hidden>
+
+        <div class="navbar">
+            <a href="#inicio" class="boton">Inicio</a>
+            <a href="#sobremi" class="boton">Sobre mí</a>
+            <a href="#habilidades" class="boton">Habilidades</a>
+            <a href="#idiomas" class="boton">Idiomas</a>
+            <a href="#proyectos" class="boton">Proyectos</a>
+            <label for="font-toggle-large" class="boton">Aumentar Texto</label>
+        </div>
+        
+        <div class="contenido-principal">
+            <!-- Hero Section (encabezado) -->
+            <section class="hero" id="inicio">
+                <div class="overlay">
+                    <h1>Hola, soy Benjamín Fernández</h1>     
+                </div>
+            </section>
+            <!-- Sobre mí -->
+            <section class="sobremi" id="sobremi">
+                <div class="imagen">
+                    <img src="img/benja.jpg" alt="Benjamín Fernández" class="foto-perfil">
+                </div>
+                <div class="texto">
+                    <h2>Sobre mí</h2>
+                    <p>Mi nombre completo es Benjamín Vicente Eugenio Fernández Toledo, actualmente vivo en Santiago de Chile en la Región Metropolitana pero soy de un pueblo llamado Llay-Llay de la Quinta Región, tengo 19 años y soy estudiante de ingeniería en informática en la Universidad Tecnológica Metropolitana.</p>
+                    <p>Me gusta la tecnología en general y sus diferentes aplicaciones en la vida diaria, aunque ultimamente me llama la atención el desarrollo de las ias dependiendo de los diferentes prompts que se les entregan.</p>
+                </div>
+            </section>
+            <!-- Habilidades -->
+            <section class="habilidades" id="habilidades">
+                <h2>Habilidades</h2>
+                    <div class="cajas-habilidades">
+                        <div class="cuadro-habilidad">
+                            <h3>Habilidades Blandas</h3>
+                            <ul>
+                                <li>Buena comunicación</li>
+                                <li>Trabajo en equipo</li>
+                                <li>Responsabilidad</li>
+                                <li>Adaptabilidad</li>
+                                <li>Honestidad</li>
+                                <li>Motivación</li>
+                            </ul>
+                        </div>
+                        <div class="cuadro-habilidad">
+                            <h3>Habilidades Técnicas</h3>
+                            <ul>
+                                <li>HTML / CSS</li>
+                                <li>C y C++</li>
+                                <li>Git y GitHub</li>
+                                <li>PHP</li>
+                                <li>mySQL</li>
+                                <li>Diseño UML</li>
+                            </ul>
+                        </div>
+                    </div>
+            </section>
+            <!-- Idiomas -->
+            <section class="idiomas" id="idiomas">
+                <h2>Idiomas</h2>
+                <div class="idiomas">
+                            <ul>
+                            <li>Español(nativo)</li>
+                            <li>Inglés(intermedio B1)</li>
+                            </ul>
+                </div>
+            </section>
+            <!-- Proyectos -->
+            <section class="proyectos" id="proyectos">
+                <h2>Mis proyectos</h2>
+                <div class="grid-proyectos">
+                    <div class="proyecto-card">
+                        <h3>Liquifácil 08/2024-11/2024</h3>
+                        <p>Proyecto para sistemas de información que consistía en un software para calcular la liquidacion de sueldo de grandes empresas, se construyó con php y se hizo un MVP pero debido a problemas lo perdimos y se quedó en stand-by.</p>
+                        <p>Se desarrolló en php con mySQL como base de datos integrada</p>
+                        <p>Principalmente me encargué de realizar el MVP programando junto con un compañero</p>
+                    </div>
+                    <div class="proyecto-card">
+                        <h3>Metro dijkstra 08/2024-09/2024</h3>
+                        <p>Este es otro proyecto interesante que desarrollamos para grafos en el que se tomaban todas las estaciones del metro como vértices, las distintas combinaciones y el tiempo que se demoran en llegar entre sí para sacar la ruta más corte en un viaje de metro utilizando el algoritmo de dijkstra.</p>
+                        <p>Se desarrolló en python y se utilizaron distintas librerias para su desarrollo</p>
+                        <p>Me aseguré de realizar el algoritmo y la interfaz interactiva</p>
+                    </div>    
+                </div>
+            </section>
+        </div>
+        <footer class="footer">
+            <p>&copy; 2024 Benjamín Fernández. Todos los derechos reservados.</p>
+            <div class="Redes">
+                <a href="https://www.instagram.com/bnjmnn/" target="_blank"><img src="img/instagram.png" alt="Instagram" width="30" height="30"></a>
+                <a href="https://www.linkedin.com/in/benjamín-fernández-toledo-0b1b1a1b5/" target="_blank"><img src="img/linkedin.png" alt="LinkedIn" width="34" height="34"></a>
+                <a href="https://github.com/bnjmnnnn" target="_blank"><img src="img/github.png" alt="GitHub" width="34" height="34"></a>
+    </body>
+</html>
