@@ -317,6 +317,123 @@ footer {
   border-bottom: 1px solid #eee;
   color: #555;
 }
+
 section {
   background: linear-gradient(to bottom, #f5f5f5, #fafafa); /* Fondo degradado unificado */
+}
+@media (max-width: 768px) {
+  /* Reducir el tamaño del texto en todo el cuerpo */
+  body {
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+  }
+
+  /* Ajustar la imagen de la sección "Sobre mí" */
+  .imagen {
+    width: 120px; /* Tamaño de la imagen más pequeño */
+    height: 120px;
+  }
+
+  /* Ajustar el padding de la sección "Sobre mí" */
+  .sobremi {
+    padding: 30px 15px;
+    font-size: 1.8rem; /* Ajustar tamaño de texto */
+  }
+
+  /* Cambiar el tamaño del texto de las secciones principales */
+  .contenido-principal h2 {
+    font-size: 2.5rem;
+  }
+
+  /* Ajustar el tamaño de los botones */
+  .navbar .boton {
+    font-size: 0.9rem; /* Reducir el tamaño de los botones */
+    padding: 8px 16px;
+  }
+
+  /* Cambiar el diseño de las cajas de habilidades */
+  .cajas-habilidades {
+    flex-direction: column; /* Apilar las cajas verticalmente */
+    gap: 20px;
+  }
+
+  /* Ajustar la columna de proyectos */
+  .grid-proyectos {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajustar el grid para pantallas más pequeñas */
+  }
+
+  /* Hacer el texto en "Mis proyectos" más pequeño */
+  .proyecto-card h3 {
+    font-size: 1.3rem; /* Reducir tamaño de los títulos de los proyectos */
+  }
+
+  .proyecto-card p {
+    font-size: 0.9rem; /* Reducir tamaño de los párrafos */
+  }
+
+  /* Ajustar el footer */
+  footer {
+    font-size: 0.9rem; /* Reducir tamaño del texto en el pie de página */
+    padding: 15px 0;
+  }
+
+  /* Estilo para la navegación fija */
+  .navbar {
+    padding: 10px 20px; /* Reducir el padding de la barra de navegación */
+  }
+
+  /* Ajustar las listas de idiomas */
+  .idiomas ul li {
+    font-size: 1.1rem; /* Reducir tamaño de texto */
+  }
+}
+
+/* Media query para pantallas aún más pequeñas (móviles en modo retrato) */
+@media (max-width: 480px) {
+  /* Ajustar tamaños de texto aún más */
+  body {
+    font-size: 0.85rem;
+  }
+
+  .sobremi {
+    font-size: 1.6rem;
+    padding: 20px 10px;
+  }
+
+  .contenido-principal h2 {
+    font-size: 2rem;
+  }
+
+  .navbar .boton {
+    font-size: 0.8rem; /* Botones más pequeños */
+    padding: 6px 12px;
+  }
+
+  /* Ajustar aún más los tamaños en las cajas de habilidades */
+  .cuadro-habilidad h3 {
+    font-size: 1.3rem;
+  }
+
+  .cuadro-habilidad ul li {
+    font-size: 1rem; /* Tamaño más pequeño */
+  }
+
+  /* Proyectos más compactos */
+  .proyecto-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .proyecto-card p {
+    font-size: 0.85rem;
+  }
+
+  /* Ajustar el tamaño de la imagen de perfil */
+  .imagen {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Modificar el layout de los proyectos */
+  .grid-proyectos {
+    grid-template-columns: 1fr; /* Una sola columna */
+  }
 }
