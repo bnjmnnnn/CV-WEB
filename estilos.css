@@ -437,3 +437,9 @@ section {
     grid-template-columns: 1fr; /* Una sola columna */
   }
 }
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll; /* Para móviles, evita que la imagen quede fija */
+    background-size: contain; /* Ajusta la imagen dentro del contenedor sin cortar */
+  }
+}
